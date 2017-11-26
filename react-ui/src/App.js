@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TodoApp from './component/TodoApp.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -38,12 +39,14 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
+          <h1> Update 1 </h1>
         </div>
         <p className="App-intro">
           {'This is '}
           <a href="https://github.com/mars/heroku-cra-node">
             {'create-react-app with a custom Node/Express server'}
           </a><br/>
+          <TodoApp />
         </p>
         <p className="App-intro">
           {this.state.fetching
