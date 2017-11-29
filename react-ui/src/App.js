@@ -46,8 +46,8 @@ class App extends Component {
           <a href="https://github.com/mars/heroku-cra-node">
             {'create-react-app with a custom Node/Express server'}
           </a><br/>
-          <TodoApp />
         </p>
+        <TodoApp />
         <p className="App-intro">
           {this.state.fetching
             ? 'Fetching message from API'
