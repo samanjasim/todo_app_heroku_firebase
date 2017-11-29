@@ -1,5 +1,5 @@
 import React from 'react';
-import ListItem from './ListItem';
+//import ListItem from './ListItem';
 
 export default class TodoApp extends React.Component {
     constructor(props) {
@@ -27,7 +27,7 @@ export default class TodoApp extends React.Component {
 
         const listItems = this.state.todos.map((item) => {
             return (
-                <ListItem key={item.id} item={item} />
+                <li key={item.id}>{item.text}</li>
             )
         })
 
