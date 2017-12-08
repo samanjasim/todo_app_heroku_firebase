@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoList from './TodoList';
 //import ListItem from './ListItem';
 
 export default class TodoApp extends React.Component {
@@ -13,30 +14,26 @@ export default class TodoApp extends React.Component {
                 },
                 {
                     id: 2,
-                    text: 'second items in list'
+                    text: 'clean the yard'
                 },
                 {
                     id: 3,
-                    text: 'third items in list'
+                    text: 'Leave mail on porch'
+                },
+                {
+                    id: 4,
+                    text: 'Play video games'
                 }
             ]
         };
     }
 
     render() {
-
-        const listItems = this.state.todos.map((item) => {
-            return (
-                <li key={item.id}>{item.text}</li>
-            )
-        })
-
+        const {todos} = this.state;
         return (
             <div>
                 <h1> Test Component </h1>
-                <ul>
-                    {listItems}
-                </ul>
+                <TodoList todos={todos} />
             </div>
         )
     }
